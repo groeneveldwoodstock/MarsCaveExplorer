@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ulm-Iw-h64">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--menu-->
+        <scene sceneID="UH8-yt-BKk">
+            <objects>
+                <viewController storyboardIdentifier="MenuViewController" title="menu" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ulm-Iw-h64" customClass="MenuViewController" customModule="Cave_Explorer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FMP-Y7-fWl">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mars Cave Explorer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZ8-cl-Ycv">
+                                <rect key="frame" x="51" y="79" width="330" height="30.666666666666671"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="28"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OT0-vU-CWE">
+                                <rect key="frame" x="20" y="198.33333333333334" width="392" height="100.00000000000003"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="U0Q-6c-qR4"/>
+                                </constraints>
+                                <string key="text">The caves and lava tubes of Mars are a vast unexplored area. Martian settlers may need resources and protection found in them. Locate as many resources as possible.</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance Explored" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vW-V3-ULS">
+                                <rect key="frame" x="75" y="313.33333333333331" width="282" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crystal Locations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="am3-fI-Rja">
+                                <rect key="frame" x="74" y="349.33333333333331" width="284" height="21"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Water Ice Locations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcd-Ds-RvK">
+                                <rect key="frame" x="74" y="385.33333333333331" width="284" height="21"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heat Source Locations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9U-aU-ose">
+                                <rect key="frame" x="72" y="421.33333333333331" width="288" height="21"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Signs of Life" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Kh-LT-3W9">
+                                <rect key="frame" x="74" y="457.33333333333331" width="284" height="21"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="mars2.png" translatesAutoresizingMaskIntoConstraints="NO" id="NlZ-kj-XkK">
+                                <rect key="frame" x="108.66666666666669" y="114.66666666666666" width="215" height="80.666666666666657"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NlZ-kj-XkK" secondAttribute="height" multiplier="732:275" id="dBt-0c-43H"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="marscave.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="zBC-xo-bgA">
+                                <rect key="frame" x="30.333333333333371" y="479.33333333333326" width="371.33333333333326" height="300"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4w-F1-oEJ">
+                                <rect key="frame" x="92" y="793.33333333333337" width="242" height="44"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Go Exploring">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                    <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="presentation" id="hKb-74-mct"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explorer Points Earned: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSS-6x-pEH">
+                                <rect key="frame" x="117.66666666666667" y="478.33333333333326" width="194.66666666666663" height="315"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ny9-JE-VtF"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstItem="vSS-6x-pEH" firstAttribute="top" secondItem="3Kh-LT-3W9" secondAttribute="bottom" id="3hQ-jo-sn0"/>
+                            <constraint firstItem="NlZ-kj-XkK" firstAttribute="top" secondItem="BZ8-cl-Ycv" secondAttribute="bottom" constant="5" id="56t-cq-c82"/>
+                            <constraint firstItem="OT0-vU-CWE" firstAttribute="centerX" secondItem="8vW-V3-ULS" secondAttribute="centerX" id="6bw-o2-aeS"/>
+                            <constraint firstItem="vSS-6x-pEH" firstAttribute="centerX" secondItem="FMP-Y7-fWl" secondAttribute="centerX" id="8iW-3U-7Ey"/>
+                            <constraint firstItem="OT0-vU-CWE" firstAttribute="leading" secondItem="FMP-Y7-fWl" secondAttribute="leading" constant="20" id="CtO-1E-bkN"/>
+                            <constraint firstItem="Hcd-Ds-RvK" firstAttribute="leading" secondItem="3Kh-LT-3W9" secondAttribute="leading" id="EUS-ua-qJm"/>
+                            <constraint firstItem="am3-fI-Rja" firstAttribute="top" secondItem="8vW-V3-ULS" secondAttribute="bottom" constant="15" id="HHx-bM-TGi"/>
+                            <constraint firstItem="Hcd-Ds-RvK" firstAttribute="top" secondItem="am3-fI-Rja" secondAttribute="bottom" constant="15" id="HOF-uk-pUy"/>
+                            <constraint firstItem="zBC-xo-bgA" firstAttribute="centerX" secondItem="NlZ-kj-XkK" secondAttribute="centerX" id="HWS-ng-19D"/>
+                            <constraint firstItem="f4w-F1-oEJ" firstAttribute="leading" secondItem="ny9-JE-VtF" secondAttribute="leading" constant="92" id="Hhn-bG-djB"/>
+                            <constraint firstItem="zBC-xo-bgA" firstAttribute="centerX" secondItem="FMP-Y7-fWl" secondAttribute="centerX" id="Jn9-F1-BrQ"/>
+                            <constraint firstItem="OT0-vU-CWE" firstAttribute="centerX" secondItem="FMP-Y7-fWl" secondAttribute="centerX" id="KhJ-9C-AhD"/>
+                            <constraint firstItem="BZ8-cl-Ycv" firstAttribute="centerX" secondItem="FMP-Y7-fWl" secondAttribute="centerX" id="NZ1-Aw-TAa"/>
+                            <constraint firstItem="am3-fI-Rja" firstAttribute="leading" secondItem="Hcd-Ds-RvK" secondAttribute="leading" id="Qy6-Nq-f2K"/>
+                            <constraint firstItem="8vW-V3-ULS" firstAttribute="centerX" secondItem="am3-fI-Rja" secondAttribute="centerX" id="UfV-9P-G4T"/>
+                            <constraint firstItem="NlZ-kj-XkK" firstAttribute="centerX" secondItem="FMP-Y7-fWl" secondAttribute="centerX" id="X5Z-qq-god"/>
+                            <constraint firstItem="D9U-aU-ose" firstAttribute="centerX" secondItem="3Kh-LT-3W9" secondAttribute="centerX" id="XOn-Oh-fD0"/>
+                            <constraint firstItem="am3-fI-Rja" firstAttribute="trailing" secondItem="Hcd-Ds-RvK" secondAttribute="trailing" id="XPh-2N-tAq"/>
+                            <constraint firstItem="ny9-JE-VtF" firstAttribute="trailing" secondItem="BZ8-cl-Ycv" secondAttribute="trailing" constant="49" id="XQx-mu-cVx"/>
+                            <constraint firstItem="am3-fI-Rja" firstAttribute="leading" secondItem="ny9-JE-VtF" secondAttribute="leading" constant="74" id="XwS-ke-p2g"/>
+                            <constraint firstItem="Hcd-Ds-RvK" firstAttribute="trailing" secondItem="3Kh-LT-3W9" secondAttribute="trailing" id="YQN-SL-H4z"/>
+                            <constraint firstItem="f4w-F1-oEJ" firstAttribute="top" secondItem="zBC-xo-bgA" secondAttribute="bottom" constant="5" id="ZwJ-fw-3co"/>
+                            <constraint firstItem="zBC-xo-bgA" firstAttribute="width" secondItem="FMP-Y7-fWl" secondAttribute="height" multiplier="100:251" id="aQN-aQ-LjT"/>
+                            <constraint firstItem="ny9-JE-VtF" firstAttribute="trailing" secondItem="f4w-F1-oEJ" secondAttribute="trailing" constant="96" id="b3d-er-jKJ"/>
+                            <constraint firstItem="f4w-F1-oEJ" firstAttribute="centerX" secondItem="FMP-Y7-fWl" secondAttribute="centerX" id="cqn-ZP-WdO"/>
+                            <constraint firstItem="BZ8-cl-Ycv" firstAttribute="top" secondItem="ny9-JE-VtF" secondAttribute="top" constant="20" id="d6Q-4l-Yrp"/>
+                            <constraint firstItem="zBC-xo-bgA" firstAttribute="centerX" secondItem="3Kh-LT-3W9" secondAttribute="centerX" id="fSW-TB-UUq"/>
+                            <constraint firstItem="BZ8-cl-Ycv" firstAttribute="leading" secondItem="ny9-JE-VtF" secondAttribute="leading" constant="51" id="geq-ty-xQ1"/>
+                            <constraint firstItem="8vW-V3-ULS" firstAttribute="top" secondItem="OT0-vU-CWE" secondAttribute="bottom" constant="15" id="jyW-ad-wke"/>
+                            <constraint firstItem="BZ8-cl-Ycv" firstAttribute="centerX" secondItem="FMP-Y7-fWl" secondAttribute="centerX" id="n6S-A2-HMT"/>
+                            <constraint firstItem="f4w-F1-oEJ" firstAttribute="top" secondItem="vSS-6x-pEH" secondAttribute="bottom" id="nIX-uQ-1aF"/>
+                            <constraint firstItem="zBC-xo-bgA" firstAttribute="centerX" secondItem="BZ8-cl-Ycv" secondAttribute="centerX" id="nJk-JT-Xcb"/>
+                            <constraint firstItem="8vW-V3-ULS" firstAttribute="leading" secondItem="ny9-JE-VtF" secondAttribute="leading" constant="75" id="p9U-ng-VAt"/>
+                            <constraint firstItem="D9U-aU-ose" firstAttribute="leading" secondItem="ny9-JE-VtF" secondAttribute="leading" constant="72" id="qBs-tr-K0I"/>
+                            <constraint firstItem="zBC-xo-bgA" firstAttribute="width" relation="lessThanOrEqual" secondItem="FMP-Y7-fWl" secondAttribute="width" id="qxK-kE-t08"/>
+                            <constraint firstItem="NlZ-kj-XkK" firstAttribute="width" secondItem="FMP-Y7-fWl" secondAttribute="width" multiplier="0.5" id="r1P-bp-UOu"/>
+                            <constraint firstItem="OT0-vU-CWE" firstAttribute="top" secondItem="NlZ-kj-XkK" secondAttribute="bottom" constant="2.9999999999999716" id="v5Y-oO-Llm"/>
+                            <constraint firstItem="zBC-xo-bgA" firstAttribute="top" secondItem="3Kh-LT-3W9" secondAttribute="bottom" constant="10" id="wiQ-zb-nUj"/>
+                            <constraint firstItem="D9U-aU-ose" firstAttribute="top" secondItem="Hcd-Ds-RvK" secondAttribute="bottom" constant="15" id="yYO-8m-gFJ"/>
+                            <constraint firstItem="3Kh-LT-3W9" firstAttribute="top" secondItem="D9U-aU-ose" secondAttribute="bottom" constant="15" id="ye5-Mo-zML"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="InformationLabel" destination="OT0-vU-CWE" id="cCE-D3-kNO"/>
+                        <outlet property="TotalCrystalsLabel" destination="am3-fI-Rja" id="5zJ-AK-VuT"/>
+                        <outlet property="TotalDistanceLabel" destination="8vW-V3-ULS" id="s71-kM-2yt"/>
+                        <outlet property="TotalHeatLabel" destination="D9U-aU-ose" id="dUh-Hm-369"/>
+                        <outlet property="TotalLifeLabel" destination="3Kh-LT-3W9" id="Lhj-xs-0Pi"/>
+                        <outlet property="TotalWaterLabel" destination="Hcd-Ds-RvK" id="fGv-OF-VYI"/>
+                        <outlet property="totalPoints" destination="vSS-6x-pEH" id="q93-ca-ln3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Clg-Kg-XBA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-848.37209302325584" y="-30.257510729613735"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="BV1-FR-VrT" customClass="GameViewController" customModule="Cave_Explorer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Luv-2a-5vU">
+                                <rect key="frame" x="330.66666666666669" y="30" width="67.333333333333314" height="34"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Home">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                    <color key="baseBackgroundColor" systemColor="systemGrayColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Ulm-Iw-h64" kind="presentation" id="TGl-y3-WoP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Luv-2a-5vU" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="top" constant="30" id="Et7-lj-Tmf"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="Luv-2a-5vU" secondAttribute="trailing" constant="32" id="a0j-eI-uYk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-27.339901477832512"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mars2.png" width="198" height="198"/>
+        <image name="marscave.jpeg" width="400" height="300"/>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
