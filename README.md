@@ -28,7 +28,7 @@ This app was created to teach and learn. All code used in creating the app is av
 </p>
 <hr>
 </p>
-<h3>Available in the App Store!</h3>
+<h3>Check out my apps in the App Store!</h3>
 <img src="https://github.com/groeneveldwoodstock/OfflineChat/blob/main/groeneveldAppStore.png" alt="Screen Shot" style="width:200px;">
 <hr>
 <p>
