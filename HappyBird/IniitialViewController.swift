@@ -1,14 +1,18 @@
 //
-//  MenuViewController.swift
+//  IniitialViewController.swift
 //  Cave Explorer 
 //
-//  Created by Richard Groeneveld on 3/9/23.
+//  Created by Richard Groeneveld on 4/11/23.
 //  Copyright © 2023 Richard Groeneveld. All rights reserved.
 //
 
 import UIKit
 
-class MenuViewController: UIViewController {
+class IniitialViewController: UIViewController {
+    
+    @IBOutlet weak var statsButton: UIButton!
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var info: UILabel!
     var totalDistance:Int{
         get {
             // Get the standard UserDefaults as "defaults"
@@ -79,40 +83,35 @@ class MenuViewController: UIViewController {
             defaults.set(newValue, forKey: "Life")
         }
     }
-    
-    
     override func viewDidLoad() {
-        var totalPointsEarned = totalDistance + totalCrystals * 10 + totalWater * 10 + totalHeat * 20 + totalLife * 100
         super.viewDidLoad()
+        info.layer.masksToBounds = true
+        info.layer.cornerRadius = 5
+        info.layer.borderWidth = 5.0
+        info.layer.borderColor = UIColor.systemBrown.cgColor
+        info.adjustsFontSizeToFitWidth = true
         // Do any additional setup after loading the view.
-        InformationLabel.layer.masksToBounds = true
-        InformationLabel.layer.cornerRadius = 5
-        TotalDistanceLabel.layer.masksToBounds = true
-        TotalDistanceLabel.layer.cornerRadius = 5
-        TotalDistanceLabel.text = "Distance Explored: " + String(totalDistance)
-        TotalCrystalsLabel.layer.masksToBounds = true
-        TotalCrystalsLabel.layer.cornerRadius = 5
-        TotalCrystalsLabel.text = "Crystal Locations: " + String(totalCrystals)
-        TotalWaterLabel.layer.masksToBounds = true
-        TotalWaterLabel.layer.cornerRadius = 5
-        TotalWaterLabel.text = "Water Ice Locations: " + String(totalWater)
-        TotalHeatLabel.layer.masksToBounds = true
-        TotalHeatLabel.layer.cornerRadius = 5
-        TotalHeatLabel.text = "Heat Source Locations: " + String(totalHeat)
-        TotalLifeLabel.layer.masksToBounds = true
-        TotalLifeLabel.layer.cornerRadius = 5
-        TotalLifeLabel.text = "Signs of Life: " + String(totalLife)
-        totalPoints.text = "EXPLORER POINTS EARNED: " + String(totalPointsEarned)
+        statsButton.layer.masksToBounds = true
+        statsButton.layer.borderWidth = 5.0
+        statsButton.layer.cornerRadius = 10
+        statsButton.layer.borderColor = UIColor.white.cgColor
+        playButton.layer.masksToBounds = true
+        playButton.layer.borderWidth = 5.0
+        playButton.layer.cornerRadius = 10
+        playButton.layer.borderColor = UIColor.darkGray.cgColor
+
+
     }
-    @IBOutlet weak var totalPoints: UILabel!
-    @IBOutlet weak var InformationLabel: UILabel!
-    @IBOutlet weak var TotalDistanceLabel: UILabel!
-    @IBOutlet weak var TotalCrystalsLabel: UILabel!
-    @IBOutlet weak var TotalWaterLabel: UILabel!
-    @IBOutlet weak var TotalHeatLabel: UILabel!
-    @IBOutlet weak var TotalLifeLabel: UILabel!
     
-    
-    
-    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }

@@ -28,8 +28,9 @@
 		C875DF742947BDB400C1C9AC /* background3.png in Resources */ = {isa = PBXBuildFile; fileRef = C875DF712947BDB400C1C9AC /* background3.png */; };
 		C875DF752947BDB400C1C9AC /* background4.png in Resources */ = {isa = PBXBuildFile; fileRef = C875DF722947BDB400C1C9AC /* background4.png */; };
 		C875DF762947BDB400C1C9AC /* background5.png in Resources */ = {isa = PBXBuildFile; fileRef = C875DF732947BDB400C1C9AC /* background5.png */; };
-		C89092AA29BA13070057E04B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89092A929BA13070057E04B /* MenuViewController.swift */; };
+		C88E31F329CC97F300C8F210 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88E31F229CC97F300C8F210 /* StackViewController.swift */; };
 		C89092AE29BA256B0057E04B /* marscave.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C89092AD29BA256B0057E04B /* marscave.jpeg */; };
+		C898109029E5CA060031A0F2 /* IniitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C898108F29E5CA060031A0F2 /* IniitialViewController.swift */; };
 		C8BCA9D029B90790000A5209 /* mars2.png in Resources */ = {isa = PBXBuildFile; fileRef = C8BCA9CF29B90790000A5209 /* mars2.png */; };
 		C8C3741929969F2E00E27CEC /* drone2.png in Resources */ = {isa = PBXBuildFile; fileRef = C8C3741829969F2E00E27CEC /* drone2.png */; };
 		C8C3741F2996A09700E27CEC /* drone1.png in Resources */ = {isa = PBXBuildFile; fileRef = C8C3741E2996A09700E27CEC /* drone1.png */; };
@@ -89,8 +90,9 @@
 		C875DF712947BDB400C1C9AC /* background3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background3.png; sourceTree = "<group>"; };
 		C875DF722947BDB400C1C9AC /* background4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background4.png; sourceTree = "<group>"; };
 		C875DF732947BDB400C1C9AC /* background5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background5.png; sourceTree = "<group>"; };
-		C89092A929BA13070057E04B /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		C88E31F229CC97F300C8F210 /* StackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
 		C89092AD29BA256B0057E04B /* marscave.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = marscave.jpeg; sourceTree = "<group>"; };
+		C898108F29E5CA060031A0F2 /* IniitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IniitialViewController.swift; sourceTree = "<group>"; };
 		C8BCA9CF29B90790000A5209 /* mars2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mars2.png; sourceTree = "<group>"; };
 		C8C3741829969F2E00E27CEC /* drone2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drone2.png; sourceTree = "<group>"; };
 		C8C3741E2996A09700E27CEC /* drone1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drone1.png; sourceTree = "<group>"; };
@@ -157,6 +159,13 @@
 				587FAD1F1F7D4B55006E55B3 /* GameScene.sks */,
 				587FAD211F7D4B55006E55B3 /* Actions.sks */,
 				587FAD231F7D4B55006E55B3 /* GameScene.swift */,
+				C898108F29E5CA060031A0F2 /* IniitialViewController.swift */,
+				C88E31F229CC97F300C8F210 /* StackViewController.swift */,
+				587FAD251F7D4B55006E55B3 /* GameViewController.swift */,
+				587FAD271F7D4B55006E55B3 /* Main.storyboard */,
+				587FAD2A1F7D4B55006E55B3 /* Assets.xcassets */,
+				587FAD2C1F7D4B55006E55B3 /* LaunchScreen.storyboard */,
+				587FAD2F1F7D4B55006E55B3 /* Info.plist */,
 				C8C374202996AFF800E27CEC /* dronecrash.mp3 */,
 				C86052FA29995BA90058FFB8 /* jetPulse.mp3 */,
 				C8C3741E2996A09700E27CEC /* drone1.png */,
@@ -179,14 +188,8 @@
 				C821D95029C0E08800083C8C /* background11.png */,
 				C821D94F29C0E08800083C8C /* background12.png */,
 				C821D95129C0E08800083C8C /* background13.png */,
-				587FAD251F7D4B55006E55B3 /* GameViewController.swift */,
-				587FAD271F7D4B55006E55B3 /* Main.storyboard */,
-				587FAD2A1F7D4B55006E55B3 /* Assets.xcassets */,
 				C8BCA9CF29B90790000A5209 /* mars2.png */,
 				C89092AD29BA256B0057E04B /* marscave.jpeg */,
-				587FAD2C1F7D4B55006E55B3 /* LaunchScreen.storyboard */,
-				587FAD2F1F7D4B55006E55B3 /* Info.plist */,
-				C89092A929BA13070057E04B /* MenuViewController.swift */,
 			);
 			path = HappyBird;
 			sourceTree = "<group>";
@@ -374,8 +377,9 @@
 			files = (
 				587FAD241F7D4B55006E55B3 /* GameScene.swift in Sources */,
 				587FAD261F7D4B55006E55B3 /* GameViewController.swift in Sources */,
+				C88E31F329CC97F300C8F210 /* StackViewController.swift in Sources */,
+				C898109029E5CA060031A0F2 /* IniitialViewController.swift in Sources */,
 				587FAD1E1F7D4B55006E55B3 /* AppDelegate.swift in Sources */,
-				C89092AA29BA13070057E04B /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

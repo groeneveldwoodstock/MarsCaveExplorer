@@ -1,10 +1,7 @@
 // GameScene.swift
 // Mars Cave Explorer
 //
-//
 //  Created by Richard Groeneveld on 1/17/23.
-//  Based on code by Pierre-Henry Soria
-//  https://github.com/pH-7/jetPulsepy-Canary
 
 import SpriteKit
 import GameplayKit
@@ -116,6 +113,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var gameBeginLabel: SKLabelNode = SKLabelNode()
     var titleLabel: SKLabelNode = SKLabelNode()
     var instructionsLabel: SKLabelNode = SKLabelNode()
+    var gamePlayLabel: SKLabelNode = SKLabelNode()
     var timer: Timer = Timer()
     var backgroundcounter: Int = 1
     var audioPlayer : AVPlayer!
@@ -125,6 +123,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let DroneTexture2 = SKTexture(imageNamed: "drone2.png")
     let DroneTexture3 = SKTexture(imageNamed: "drone3.png")
     let DroneTexture4 = SKTexture(imageNamed: "drone4.png")
+    @objc func swipeD() {
+        swipe(ID: 4)
+    }
+    @objc func swipeU() {
+        swipe(ID: 2)
+    }
+    func swipe(ID: Int) {
+        if (ID == 4 ) {
+            drone.position = CGPoint(x: self.frame.midX, y: (drone.position.y ) - 35)
+            }
+        if (ID == 2 ) {
+            drone.position = CGPoint(x: self.frame.midX, y: (drone.position.y ) + 35)
+            }
+    }
     
 
     enum ColliderType: UInt32 {
@@ -136,6 +148,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func didMove(to view: SKView) -> Void {
         self.physicsWorld.contactDelegate = self
         initializeGame()
+        
+        let swipeUp: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeU))
+        swipeUp.direction = .up
+        view.addGestureRecognizer(swipeUp)
+        
+        let swipeDown: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeD))
+        swipeDown.direction = .down
+        view.addGestureRecognizer(swipeDown)
+        
     }
 
     func initializeGame() -> Void {
@@ -188,7 +209,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         // For colisions
         drone.physicsBody = SKPhysicsBody(circleOfRadius: 25)
-        physicsWorld.gravity = CGVector(dx: 0, dy: -1.8)
+        physicsWorld.gravity = CGVector(dx: 0, dy: 0) //dy: -1.8
         drone.physicsBody!.isDynamic = false
 
         drone.physicsBody!.contactTestBitMask = ColliderType.Object.rawValue
@@ -204,6 +225,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.setHighScoreStyle()
         self.setTitleStyle()
         self.setInstructionsStyle()
+        self.setGamePlayStyle()
         
         scoreLabel.position = CGPoint(x: self.frame.midX, y: self.frame.midY+375)
         self.addChild(scoreLabel)
@@ -216,6 +238,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(titleLabel)
         instructionsLabel.position = CGPoint(x: self.frame.midY, y: self.frame.midY-400)
         self.addChild(instructionsLabel)
+        gamePlayLabel.position = CGPoint(x: self.frame.midY, y: self.frame.midY-480)
+        self.addChild(gamePlayLabel)
     }
     
     func loadScoreBackground() {
@@ -326,7 +350,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 gameOverLabel.position = CGPoint(x: self.frame.midY, y: self.frame.midY)
 
                 self.addChild(gameOverLabel)
-                gameBeginLabel.text = "Touch screen to restart!"
+                gameBeginLabel.text = "Swipe screen to restart!"
                 gameBeginLabel.position = CGPoint(x: self.frame.midY, y: self.frame.midY-300)
                 self.addChild(gameBeginLabel)
                 
@@ -434,8 +458,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func setInstructionsStyle() -> Void {
         instructionsLabel.fontName = "Helvetica"
         instructionsLabel.fontSize = 40
-        instructionsLabel.text = "Tap Screen to Play"
+        instructionsLabel.text = "Swipe Screen to Play"
         instructionsLabel.fontColor = UIColor(red: 237255, green: 231/255, blue: 213/255, alpha: 255)
+    }
+    func setGamePlayStyle() -> Void {
+        gamePlayLabel.fontName = "Helvetica"
+        gamePlayLabel.fontSize = 25
+        gamePlayLabel.text = "Swipe up and down to avoid collisions."
+        gamePlayLabel.fontColor = UIColor(red: 237255, green: 231/255, blue: 213/255, alpha: 255)
     }
     func setMessageScoreStyle() -> Void {
         gameOverLabel.fontName = "Helvetica"
@@ -446,13 +476,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         gameBeginLabel.fontName = "TrebuchetMS-Italic"
         gameBeginLabel.fontSize = 30
     }
-
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) -> Void {
         if gameOver == false {
             drone.physicsBody!.isDynamic = true
             drone.physicsBody!.velocity = CGVector(dx: 0, dy: 0)
             //Impulse
-            drone.physicsBody!.applyImpulse(CGVector(dx: 0, dy: 22))
+            drone.physicsBody!.applyImpulse(CGVector(dx: 0, dy: 0))
             playjetPulse()
             
         } else {
